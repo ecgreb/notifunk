@@ -24,6 +24,13 @@ public class Notifunktivity extends Activity {
         pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
+        final Notification.Action call =
+                new Notification.Action(android.R.drawable.ic_menu_call, "Call", pendingIntent);
+
+        final Notification.Action cancel =
+                new Notification.Action(android.R.drawable.ic_menu_close_clear_cancel, "Cancel",
+                        pendingIntent);
+
         Button notifyButton = (Button) findViewById(R.id.notify);
         notifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +42,8 @@ public class Notifunktivity extends Activity {
                         .setSmallIcon(android.R.drawable.sym_def_app_icon)
                         .setContentIntent(pendingIntent)
                         .setVisibility(Notification.VISIBILITY_PRIVATE)
+                        .addAction(call)
+                        .addAction(cancel)
                         .setAutoCancel(true);
 
                 Notification notification = builder.build();
@@ -56,6 +65,8 @@ public class Notifunktivity extends Activity {
                         .setPriority(Notification.PRIORITY_MAX)
                         .setContentIntent(pendingIntent)
                         .setVisibility(Notification.VISIBILITY_PUBLIC)
+                        .addAction(call)
+                        .addAction(cancel)
                         .setAutoCancel(true);
 
                 Notification notification = builder.build();
@@ -77,6 +88,8 @@ public class Notifunktivity extends Activity {
                         .setContentIntent(pendingIntent)
                         .setPriority(Notification.PRIORITY_MAX)
                         .setVisibility(Notification.VISIBILITY_SECRET)
+                        .addAction(call)
+                        .addAction(cancel)
                         .setAutoCancel(true);
 
                 Notification notification = builder.build();
