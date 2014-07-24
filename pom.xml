@@ -16,7 +16,7 @@
         <dependency>
             <groupId>android</groupId>
             <artifactId>android</artifactId>
-            <version>L_r1</version>
+            <version>L_r3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
