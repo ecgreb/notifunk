@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,8 @@ public class Notifunktivity extends Activity {
                         .setContentText("I'm kinda buzzed and it's all because")
                         .setTicker("I'm kinda buzzed and it's all because")
                         .setSmallIcon(android.R.drawable.sym_def_app_icon)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                R.drawable.ic_montell_jordan))
                         .setContentIntent(pendingIntent)
                         .setVisibility(Notification.VISIBILITY_PRIVATE)
                         .addAction(call)
@@ -62,6 +65,8 @@ public class Notifunktivity extends Activity {
                         .setContentText("South Central does it like nobody does")
                         .setTicker("South Central does it like nobody does")
                         .setSmallIcon(android.R.drawable.sym_def_app_icon)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                R.drawable.ic_montell_jordan))
                         .setPriority(Notification.PRIORITY_MAX)
                         .setContentIntent(pendingIntent)
                         .setVisibility(Notification.VISIBILITY_PUBLIC)
@@ -85,6 +90,8 @@ public class Notifunktivity extends Activity {
                         .setContentText("To all my neighbors you got much flavor")
                         .setTicker("To all my neighbors you got much flavor")
                         .setSmallIcon(android.R.drawable.sym_def_app_icon)
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+                                R.drawable.ic_montell_jordan))
                         .setContentIntent(pendingIntent)
                         .setPriority(Notification.PRIORITY_MAX)
                         .setVisibility(Notification.VISIBILITY_SECRET)
